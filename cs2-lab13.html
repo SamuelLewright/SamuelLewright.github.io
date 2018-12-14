@@ -58,7 +58,7 @@ public class BinSrchTree{
   private BSTNode recAVLInsert(BSTNode node, String key, Object element){
     if(node == null){
       // empty spot? insert here.
-      System.out.println("insert: -"+key+"-");
+      System.out.println(insert: -+key+-);
       node = new BSTNode(key, element, null, null);
     }else if(key.compareTo(node.getKey()) < 0){
       // insert in left subtree
@@ -143,7 +143,7 @@ public class BinSrchTree{
 
   private String recToString(BSTNode node){
     if (node == null){
-      return "";
+      return ;
     }else{
       return recToString(node.getLeft()) +
         node.getKey() +
@@ -177,7 +177,7 @@ public class BinSrchTree{
   private BSTNode singleRightRotation(BSTNode k2){
     //TASK: Rotate the left child up and to the right to
     //      become the new root of this subtree
-    System.out.println("right rotation");
+    System.out.println(right rotation);
     BSTNode k1 = k2.left;
     k2.left = k1.right;
     k1.right = k2;
@@ -189,7 +189,7 @@ public class BinSrchTree{
   private BSTNode singleLeftRotation(BSTNode k1){
     //TASK: Rotate the right child up and to the left to
     //      become the new root of this subtree
-    System.out.println("left rotation");
+    System.out.println(left rotation);
     BSTNode k2 = k1.right;
     k1.right = k2.left;
     k2.left = k1;
@@ -201,7 +201,7 @@ public class BinSrchTree{
   private BSTNode doubleLeftRightRotation(BSTNode k3){
     //TASK: Rotate the left subtree to the left, then up
     //      and to the right to become the new root of this subtree
-    System.out.println("left right rotation");
+    System.out.println(left right rotation);
     k3.left = singleLeftRotation(k3.left);
     return singleRightRotation(k3);
   }
@@ -209,7 +209,7 @@ public class BinSrchTree{
   private BSTNode doubleRightLeftRotation(BSTNode k4){
     //TASK: Rotate the right subtree to the right, then up and to
     //      the left to become the new root of this subtree
-    System.out.println("right left rotation");
+    System.out.println(right left rotation);
     k4.right = singleRightRotation(k4.right);
     return singleLeftRotation(k4);
   }
@@ -221,7 +221,7 @@ public class BinSrchTree{
     //PRE:
     //POS:
     //TAS:
-    System.out.println("delete "+key);
+    System.out.println(delete +key);
     root = recDelete (root, key);
   }
 
@@ -260,7 +260,7 @@ public class BinSrchTree{
       BSTNode tree = node.getLeft().getRight();
       BSTNode right =  node.getRight();
       if (tree != null){
-        // find a place for "tree"
+        // find a place for tree
         BSTNode temp = right;
         while (temp.getLeft() != null){
           temp = temp.getLeft();
